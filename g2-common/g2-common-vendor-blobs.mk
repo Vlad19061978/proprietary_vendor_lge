@@ -96,7 +96,11 @@ PRODUCT_COPY_FILES += \
     vendor/lge/g2-common/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
     vendor/lge/g2-common/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
     vendor/lge/g2-common/proprietary/lib/hw/camera.vendor.msm8974.so:system/lib/hw/camera.vendor.msm8974.so \
-    vendor/lge/g2-common/proprietary/lib/libchromatix_imx135_liveshot.so:system/lib/libchromatix_imx135_liveshot.so \
+    vendor/lge/g3-common/proprietary/lib/libAlAisLib.so:system/lib/libAlAisLib.so \
+    vendor/lge/g3-common/proprietary/lib/libAlAisWrap.so:system/lib/libAlAisWrap.so \
+    vendor/lge/g3-common/proprietary/lib/libAlAisTune.so:system/lib/libAlAisTune.so \
+    vendor/lge/g3-common/proprietary/lib/libalmcascore.so:system/lib/libalmcascore.so \
+    vendor/lge/g3-common/proprietary/lib/libalmcaswrap.so:system/lib/libalmcaswrap.so \
     vendor/lge/g2-common/proprietary/lib/libdivxdrm_jni.so:system/lib/libdivxdrm_jni.so \
     vendor/lge/g2-common/proprietary/lib/libdivxdrmdecrypt.so:system/lib/libdivxdrmdecrypt.so \
     vendor/lge/g2-common/proprietary/lib/libdrmframework.so:system/lib/libdrmframework.so \
@@ -182,23 +186,60 @@ PRODUCT_COPY_FILES += \
     vendor/lge/g2-common/proprietary/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libc2d30-a4xx.so:system/vendor/lib/libc2d30-a4xx.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx132_common.so:system/vendor/lib/libchromatix_imx132_common.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx132_default_video.so:system/vendor/lib/libchromatix_imx132_default_video.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx132_mms_video.so:system/vendor/lib/libchromatix_imx132_mms_video.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx132_preview.so:system/vendor/lib/libchromatix_imx132_preview.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx132_vt.so:system/vendor/lib/libchromatix_imx132_vt.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_common.so:system/vendor/lib/libchromatix_imx135_common.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_default_video.so:system/vendor/lib/libchromatix_imx135_default_video.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_hfr_120.so:system/vendor/lib/libchromatix_imx135_hfr_120.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_hfr_60.so:system/vendor/lib/libchromatix_imx135_hfr_60.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_mms_video.so:system/vendor/lib/libchromatix_imx135_mms_video.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_preview.so:system/vendor/lib/libchromatix_imx135_preview.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_snapshot.so:system/vendor/lib/libchromatix_imx135_snapshot.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_uhd_video.so:system/vendor/lib/libchromatix_imx135_uhd_video.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_video_dualrec.so:system/vendor/lib/libchromatix_imx135_video_dualrec.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_video_hdr.so:system/vendor/lib/libchromatix_imx135_video_hdr.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_video_hd.so:system/vendor/lib/libchromatix_imx135_video_hd.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libchromatix_imx135_video_qtr.so:system/vendor/lib/libchromatix_imx135_video_qtr.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx091_common.so:system/vendor/lib/libchromatix_imx091_common.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx091_default_video.so:system/vendor/lib/libchromatix_imx091_default_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx091_hfr_120.so:system/vendor/lib/libchromatix_imx091_hfr_120.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx091_liveshot.so:system/vendor/lib/libchromatix_imx091_liveshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx091_preview.so:system/vendor/lib/libchromatix_imx091_preview.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx091_snapshot.so:system/vendor/lib/libchromatix_imx091_snapshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx091_video_hd.so:system/vendor/lib/libchromatix_imx091_video_hd.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx119_common.so:system/vendor/lib/libchromatix_imx119_common.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx119_default_video.so:system/vendor/lib/libchromatix_imx119_default_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx119_liveshot.so:system/vendor/lib/libchromatix_imx119_liveshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx119_preview.so:system/vendor/lib/libchromatix_imx119_preview.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_common.so:system/vendor/lib/libchromatix_imx135_30fps_common.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_default_video.so:system/vendor/lib/libchromatix_imx135_30fps_default_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_common.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_common.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_default_video.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_default_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_hfr_120.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_hfr_120.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_hfr_60.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_hfr_60.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_liveshot.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_liveshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_mms_video.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_mms_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_preview.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_preview.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_snapshot.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_snapshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_uhd_video.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_uhd_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_video_dualrec.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_video_dualrec.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_video_hdr.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_video_hdr.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_video_hd.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_video_hd.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_fuji_video_qtr.so:system/vendor/lib/libchromatix_imx135_30fps_fuji_video_qtr.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_hfr_120.so:system/vendor/lib/libchromatix_imx135_30fps_hfr_120.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_hfr_60.so:system/vendor/lib/libchromatix_imx135_30fps_hfr_60.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_liveshot.so:system/vendor/lib/libchromatix_imx135_30fps_liveshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_mms_video.so:system/vendor/lib/libchromatix_imx135_30fps_mms_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_preview.so:system/vendor/lib/libchromatix_imx135_30fps_preview.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_snapshot.so:system/vendor/lib/libchromatix_imx135_30fps_snapshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_uhd_video.so:system/vendor/lib/libchromatix_imx135_30fps_uhd_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_video_dualrec.so:system/vendor/lib/libchromatix_imx135_30fps_video_dualrec.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_video_hdr.so:system/vendor/lib/libchromatix_imx135_30fps_video_hdr.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_video_hd.so:system/vendor/lib/libchromatix_imx135_30fps_video_hd.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx135_30fps_video_qtr.so:system/vendor/lib/libchromatix_imx135_30fps_video_qtr.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx208_common.so:system/vendor/lib/libchromatix_imx208_common.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx208_default_video.so:system/vendor/lib/libchromatix_imx208_default_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx208_mms_video.so:system/vendor/lib/libchromatix_imx208_mms_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx208_preview.so:system/vendor/lib/libchromatix_imx208_preview.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx208_vt.so:system/vendor/lib/libchromatix_imx208_vt.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_common.so:system/vendor/lib/libchromatix_imx214_common.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_default_video.so:system/vendor/lib/libchromatix_imx214_default_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_hfr_120.so:system/vendor/lib/libchromatix_imx214_hfr_120.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_hfr_60.so:system/vendor/lib/libchromatix_imx214_hfr_60.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_liveshot.so:system/vendor/lib/libchromatix_imx214_liveshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_mms_video.so:system/vendor/lib/libchromatix_imx214_mms_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_preview.so:system/vendor/lib/libchromatix_imx214_preview.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_snapshot.so:system/vendor/lib/libchromatix_imx214_snapshot.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_uhd_video.so:system/vendor/lib/libchromatix_imx214_uhd_video.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_video_dualrec.so:system/vendor/lib/libchromatix_imx214_video_dualrec.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_video_hd.so:system/vendor/lib/libchromatix_imx214_video_hd.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libchromatix_imx214_video_qtr.so:system/vendor/lib/libchromatix_imx214_video_qtr.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libchromaflash.so:system/vendor/lib/libchromaflash.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libcneapiclient.so:system/vendor/lib/libcneapiclient.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libcneconn.so:system/vendor/lib/libcneconn.so \
@@ -250,9 +291,12 @@ PRODUCT_COPY_FILES += \
     vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_hdr_gb_lib.so:system/vendor/lib/libmmcamera_hdr_gb_lib.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_hdr_lib.so:system/vendor/lib/libmmcamera_hdr_lib.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_imglib.so:system/vendor/lib/libmmcamera_imglib.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_imx132.so:system/vendor/lib/libmmcamera_imx132.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_imx135.so:system/vendor/lib/libmmcamera_imx135.so \
-    vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_sonyimx135_eeprom.so:system/vendor/lib/libmmcamera_sonyimx135_eeprom.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libmmcamera_imx091.so:system/vendor/lib/libmmcamera_imx091.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libmmcamera_imx119.so:system/vendor/lib/libmmcamera_imx119.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libmmcamera_imx135_eeprom.so:system/vendor/lib/libmmcamera_imx135_eeprom.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libmmcamera_imx135.so:system/vendor/lib/libmmcamera_imx135.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libmmcamera_imx208.so:system/vendor/lib/libmmcamera_imx208.so \
+    vendor/lge/g3-common/proprietary/vendor/lib/libmmcamera_imx214.so:system/vendor/lib/libmmcamera_imx214.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_tintless_algo.so:system/vendor/lib/libmmcamera_tintless_algo.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_tintless_bg_pca_algo.so:system/vendor/lib/libmmcamera_tintless_bg_pca_algo.so \
     vendor/lge/g2-common/proprietary/vendor/lib/libmmcamera_tuning.so:system/vendor/lib/libmmcamera_tuning.so \
